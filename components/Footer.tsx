@@ -1,0 +1,6 @@
+import { Instagram } from './InstagramIcon';
+import Link from 'next/link';
+
+import { Brand } from './Header';
+import { conversation, instagram } from '@/lib/catalog';
+export function Footer() { return <footer className="site-footer"><div className="footer-top container"><div className="footer-brand"><Brand footer/><p>Nutrição, movimento e escolhas<br/>que acompanham a sua vida.</p></div><div><span className="eyebrow">EXPLORE</span><Link href="/loja/">Loja FitLife</Link><Link href="/acompanhamento/">Acompanhamento</Link><Link href="/victor-montalvao/">Victor Montalvão</Link><Link href="/receitas/">Receitas</Link></div><div><span className="eyebrow">MAIS PERTO</span><a href={conversation} target="_blank" rel="noopener noreferrer">Fale com a FitLife</a><a href={instagram} target="_blank" rel="noopener noreferrer" className="social-link"><Instagram size={16}/>@soul.fitlife</a><p className="footer-note">Valores, disponibilidade e entrega<br/>confirmados no atendimento.</p></div></div><div className="footer-word" aria-hidden="true">VIVA O SEU MELHOR.</div><div className="footer-bottom container"><span>© {new Date().getFullYear()} FitLife.</span><span>Seu ritmo. Suas escolhas. Sua vida.</span><span>Feito para continuar.</span></div></footer>; }
